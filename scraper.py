@@ -26,14 +26,9 @@ for all_content in soup.find_all('span', class_='p24_content'):
         area = all_content.find('span', class_='p24_bold')
 
         if area == None:
-            print("The area is no there.")
+            area = Nan
         else:
             area = area.text
-        print(title)
-        print(price)
-        print(excerpt)
-        print(area)
-        print('****************************')
     except:
         pass
     csv_writer.writerow([title, price, excerpt, area])
