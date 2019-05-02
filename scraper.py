@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 import os
+"""This script extracts data from property24 and appends to p24.csv everytime
+the script is run"""
 
 #set website
 source = requests.get('https://www.property24.com/houses-to-rent/johannesburg/gauteng/100#SortOrder').text
